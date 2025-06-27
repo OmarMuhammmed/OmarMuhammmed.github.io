@@ -414,37 +414,56 @@
     right: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 70% 30%, var(--glow-color) 0%, transparent 40%);
+    background: radial-gradient(circle at 70% 30%, var(--glow-color) 0%, transparent 70%);
     z-index: 0;
-    opacity: 0.8;
+    opacity: 0.4;
   }
   
   .skills-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
     justify-content: center;
     position: relative;
     z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .skills-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.2rem;
     justify-content: center;
     width: 100%;
+    padding: 2rem;
   }
   
   .skills-list span {
     background-color: var(--card-bg);
     border: 1px solid rgba(99, 102, 241, 0.3);
-    padding: 0.8rem 1.8rem;
+    padding: 1rem 1.8rem;
     border-radius: 30px;
     font-size: 1rem;
     font-weight: 500;
     transition: all var(--transition-speed) ease;
     backdrop-filter: blur(5px);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .skills-list span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+    transition: 0.5s;
+  }
+  
+  .skills-list span:hover::before {
+    left: 100%;
   }
   
   .skills-list span:hover {
@@ -452,6 +471,102 @@
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
     border-color: transparent;
+    color: white;
+  }
+  
+  /* Skill categories with different colors */
+  .skills-list span:nth-child(1),  /* Python */
+  .skills-list span:nth-child(2),  /* Django */
+  .skills-list span:nth-child(3),  /* DRF */
+  .skills-list span:nth-child(4),  /* FastAPI */
+  .skills-list span:nth-child(5),  /* Celery */
+  .skills-list span:nth-child(6),  /* PostgreSQL */
+  .skills-list span:nth-child(7),  /* SQLite3 */
+  .skills-list span:nth-child(8) { /* Redis */
+    border-color: rgba(16, 185, 129, 0.3);
+  }
+  
+  .skills-list span:nth-child(1):hover,
+  .skills-list span:nth-child(2):hover,
+  .skills-list span:nth-child(3):hover,
+  .skills-list span:nth-child(4):hover,
+  .skills-list span:nth-child(5):hover,
+  .skills-list span:nth-child(6):hover,
+  .skills-list span:nth-child(7):hover,
+  .skills-list span:nth-child(8):hover {
+    background: linear-gradient(45deg, #10b981, #059669);
+  }
+  
+  .skills-list span:nth-child(9),   /* HTML */
+  .skills-list span:nth-child(10),  /* CSS3 */
+  .skills-list span:nth-child(11),  /* JavaScript */
+  .skills-list span:nth-child(12) { /* Bootstrap */
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+  
+  .skills-list span:nth-child(9):hover,
+  .skills-list span:nth-child(10):hover,
+  .skills-list span:nth-child(11):hover,
+  .skills-list span:nth-child(12):hover {
+    background: linear-gradient(45deg, #3b82f6, #2563eb);
+  }
+  
+  .skills-list span:nth-child(13),  /* Docker */
+  .skills-list span:nth-child(14),  /* Git */
+  .skills-list span:nth-child(15),  /* Linux */
+  .skills-list span:nth-child(16),  /* TDD */
+  .skills-list span:nth-child(17),  /* CI/CD */
+  .skills-list span:nth-child(18) { /* Nginx */
+    border-color: rgba(245, 158, 11, 0.3);
+  }
+  
+  .skills-list span:nth-child(13):hover,
+  .skills-list span:nth-child(14):hover,
+  .skills-list span:nth-child(15):hover,
+  .skills-list span:nth-child(16):hover,
+  .skills-list span:nth-child(17):hover,
+  .skills-list span:nth-child(18):hover {
+    background: linear-gradient(45deg, #f59e0b, #d97706);
+  }
+  
+  .skills-list span:nth-child(19),  /* Data Structures */
+  .skills-list span:nth-child(20),  /* OOP */
+  .skills-list span:nth-child(21),  /* SOLID Principles */
+  .skills-list span:nth-child(22),  /* API Design */
+  .skills-list span:nth-child(23) { /* C++ */
+    border-color: rgba(236, 72, 153, 0.3);
+  }
+  
+  .skills-list span:nth-child(19):hover,
+  .skills-list span:nth-child(20):hover,
+  .skills-list span:nth-child(21):hover,
+  .skills-list span:nth-child(22):hover,
+  .skills-list span:nth-child(23):hover {
+    background: linear-gradient(45deg, #ec4899, #db2777);
+  }
+  
+  @media (max-width: 768px) {
+    .skills-list {
+      gap: 1rem;
+      padding: 1.5rem;
+    }
+    
+    .skills-list span {
+      padding: 0.8rem 1.5rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skills-list {
+      gap: 0.8rem;
+      padding: 1rem;
+    }
+    
+    .skills-list span {
+      padding: 0.7rem 1.2rem;
+      font-size: 0.85rem;
+    }
   }
   
   /* Projects Section */
@@ -885,11 +1000,6 @@
   
     .cv-btn {
       padding: 0.9rem 2rem;
-    }
-  
-    .skills-list span {
-      padding: 0.6rem 1.2rem;
-      font-size: 0.9rem;
     }
   }
   
