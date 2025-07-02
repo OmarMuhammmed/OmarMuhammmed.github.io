@@ -10,6 +10,9 @@
   <title>Omar Muhammed | Backend Engineer</title>
 </head>
 <body>
+  <!-- Particle animation container -->
+  <div id="particles-js"></div>
+
   <div class="container">
     <header>
       <div class="logo">
@@ -38,7 +41,7 @@
     <main>
       <section id="hero" class="section">
         <div class="hero-content">
-          <div class="hero-text">
+          <div class="hero-text animate-element fade-in">
             <h1>Omar <span class="gradient-text">Muhammed</span></h1>
             <div class="animated-subtitle">
               <span>Backend Engineer</span>
@@ -49,12 +52,19 @@
                 <span class="highlight">Django and Django REST Framework</span>.
               </p>
             </div>
+            
+            <!-- Open to work badge -->
+            <div class="open-to-work">
+              <div class="pulse-animation"></div>
+              <span><i class="fas fa-briefcase"></i> Open to Work</span>
+            </div>
+            
             <div class="cta-buttons">
               <a href="#contact" class="primary-btn">Get in touch</a>
               <a href="#projects" class="secondary-btn">View Projects</a>
             </div>
           </div>
-          <div class="hero-image">
+          <div class="hero-image animate-element slide-in-right">
             <div class="profile-image-container">
               <img src="imgs/porfile.png" alt="Omar Muhammed" />
               <div class="profile-backdrop"></div>
@@ -63,7 +73,7 @@
         </div>
       </section>
 
-      <section id="skills" class="section">
+      <section id="skills" class="section animate-section">
         <div class="section-header">
           <h2>My <span class="gradient-text">Skills</span></h2>
           <p class="section-subheading">Technologies I work with</p>
@@ -97,14 +107,14 @@
         </div>
       </section>
 
-      <section id="projects" class="section">
+      <section id="projects" class="section animate-section">
         <div class="section-header">
           <h2>Featured <span class="gradient-text">Projects</span></h2>
           <p class="section-subheading">What I've been working on</p>
         </div>
         <div class="projects-container">
             
-          <div class="project-card">
+          <div class="project-card animate-element fade-in-up">
             <div class="project-content">
               <h3>Twitter API Clone</h3>
               <div class="project-tags">
@@ -135,7 +145,7 @@
             </div>
           </div>
 
-          <div class="project-card">
+          <div class="project-card animate-element fade-in-up" style="animation-delay: 0.2s;">
             <div class="project-content">
               <h3>E-Learning Platform</h3>
               <div class="project-tags">
@@ -167,7 +177,7 @@
             </div>
           </div>
 
-          <div class="project-card">
+          <div class="project-card animate-element fade-in-up" style="animation-delay: 0.4s;">
             <div class="project-content">
               <h3>E-Commerce API</h3>
               <div class="project-tags">
@@ -200,7 +210,7 @@
             </div>
           </div>
 
-          <div class="project-card">
+          <div class="project-card animate-element fade-in-up" style="animation-delay: 0.6s;">
             <div class="project-content">
               <h3>Recipe API</h3>
               <div class="project-tags">
@@ -238,7 +248,7 @@
             </div>
           </div>
 
-          <div class="project-card">
+          <div class="project-card animate-element fade-in-up" style="animation-delay: 0.8s;">
             <div class="project-content">
               <h3>Product Search API</h3>
               <div class="project-tags">
@@ -278,11 +288,25 @@
         </div>
       </section>
 
-      <section id="contact" class="section">
+      <section id="contact" class="section animate-section">
         <div class="section-header">
           <h2>Get In <span class="gradient-text">Touch</span></h2>
           <p class="section-subheading">I'm currently open to new opportunities</p>
         </div>
+        
+        <!-- Job status indicator -->
+        <div class="job-status-container">
+          <div class="job-status">
+            <div class="status-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="status-text">
+              <h3>Actively Seeking Backend Developer Roles</h3>
+              <p>I'm currently available for full-time positions and ready to join your team.</p>
+            </div>
+          </div>
+        </div>
+        
         <div class="contact-backdrop"></div>
         <div class="contact-container">
           <div class="contact-left">
@@ -296,18 +320,21 @@
               <div class="social-icons">
                 <a href="https://github.com/OmarMuhammmed" target="_blank" class="social-icon">
                   <i class="fab fa-github"></i>
+                  <span class="icon-tooltip">GitHub</span>
                 </a>
                 <a href="https://www.linkedin.com/in/omar-muhammed-9a7428285/" target="_blank" class="social-icon">
                   <i class="fab fa-linkedin"></i>
+                  <span class="icon-tooltip">LinkedIn</span>
                 </a>
                 <a href="https://x.com/OmarMuhammmed" target="_blank" class="social-icon">
                   <i class="fab fa-twitter"></i>
+                  <span class="icon-tooltip">Twitter</span>
                 </a>
               </div>
             </div>
             
             <div class="contact-cta">
-              <a href="https://drive.google.com/file/d/1cLvMLkaGi6KtF9BUbVttHzwFfl64PcKd/view?usp=sharing" target="_blank" class="cv-btn">
+              <a href="https://drive.google.com/file/d/1vZCak5f5IXpczrQ6wdlXCqmBHEQxxaIm/view?usp=drive_link
                 <i class="fas fa-file-download"></i> Download CV
               </a>
             </div>
@@ -321,7 +348,119 @@
     </footer>
   </div>
 
+  <!-- Particles.js for background animation -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  
   <script>
+    // Initialize particles.js
+    document.addEventListener('DOMContentLoaded', function() {
+      particlesJS('particles-js', {
+        "particles": {
+          "number": {
+            "value": 80,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#6366f1"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            },
+            "polygon": {
+              "nb_sides": 5
+            }
+          },
+          "opacity": {
+            "value": 0.3,
+            "random": false,
+            "anim": {
+              "enable": false,
+              "speed": 1,
+              "opacity_min": 0.1,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 40,
+              "size_min": 0.1,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#6366f1",
+            "opacity": 0.2,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "grab"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 140,
+              "line_linked": {
+                "opacity": 0.5
+              }
+            },
+            "bubble": {
+              "distance": 400,
+              "size": 40,
+              "duration": 2,
+              "opacity": 8,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 200,
+              "duration": 0.4
+            },
+            "push": {
+              "particles_nb": 4
+            },
+            "remove": {
+              "particles_nb": 2
+            }
+          }
+        },
+        "retina_detect": true
+      });
+    });
+
     // Mobile menu toggle
     document.querySelector('.hamburger').addEventListener('click', function() {
       document.querySelector('nav').classList.toggle('active');
@@ -339,6 +478,32 @@
         document.querySelector('nav').classList.remove('active');
         document.querySelector('.hamburger').classList.remove('active');
       });
+    });
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observe all elements with animate-section class
+    document.querySelectorAll('.animate-section').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Observe all elements with animate-element class
+    document.querySelectorAll('.animate-element').forEach(element => {
+      observer.observe(element);
     });
   </script>
 </body>
