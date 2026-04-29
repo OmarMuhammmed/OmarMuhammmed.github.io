@@ -1,1188 +1,547 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-            rel="stylesheet" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Muhammed | Backend Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor glow effect -->
+    <div id="cursor-glow"></div>
 
-        <link rel="stylesheet" href="style.css" />
-
-        <title>Omar Muhammed | Backend Engineer</title>
-    </head>
-    <body class="bg-gray-900 text-white overflow-x-hidden">
-        <div id="particles-js"></div>
-
-        <header
-            class="fixed w-full top-0 z-50 backdrop-blur"
-            style="
-                background-color: rgba(17, 24, 39, 0.95);
-                border-bottom: 1px solid rgba(99, 102, 241, 0.2);
-            ">
-            <div class="container py-4">
-                <div class="flex justify-between items-center">
-                    <div class="text-2xl font-bold">
-                        <span
-                            style="
-                                background: linear-gradient(
-                                    to right,
-                                    #6366f1,
-                                    #ec4899
-                                );
-                                -webkit-background-clip: text;
-                                background-clip: text;
-                                -webkit-text-fill-color: transparent;
-                            "
-                            >OM</span
-                        >
-                    </div>
-                    <nav class="hidden md:flex items-center gap-8">
-                        <a href="#home" class="nav-link">Home</a>
-                        <a href="#experience" class="nav-link">Experience</a>
-                        <a href="#skills" class="nav-link">Skills</a>
-                        <a href="#posts" class="nav-link">Posts</a>
-                        <a href="#projects" class="nav-link">Projects</a>
-                        <a href="#contact" class="nav-link">Contact</a>
-                        <div class="flex gap-4 ml-4">
-                            <a
-                                href="https://github.com/OmarMuhammmed"
-                                target="_blank"
-                                class="nav-link">
-                                <i class="fab fa-github text-xl"></i>
-                            </a>
-                            <a
-                                href="https://www.linkedin.com/in/omar-muhammed-9a7428285/"
-                                target="_blank"
-                                class="nav-link">
-                                <i class="fab fa-linkedin text-xl"></i>
-                            </a>
-                            <a
-                                href="https://x.com/OmarMuhammmed"
-                                target="_blank"
-                                class="nav-link">
-                                <i class="fab fa-twitter text-xl"></i>
-                            </a>
-                        </div>
-                    </nav>
-                    <button class="md:hidden text-white" onclick="toggleMenu()">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
+    <!-- Navigation -->
+    <header id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-bracket">{</span>OM<span class="logo-bracket">}</span>
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#posts" class="nav-link">Posts</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-socials">
+                <a href="https://github.com/OmarMuhammmed" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/omar-muhammed-9a7428285/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/201157420362" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
-            <div
-                id="mobile-menu"
-                class="hidden md:hidden backdrop-blur"
-                style="background-color: rgba(17, 24, 39, 0.98)">
-                <div class="px-6 py-4 space-y-4">
-                    <a
-                        href="#home"
-                        class="block nav-link"
-                        onclick="toggleMenu()"
-                        >Home</a
-                    >
-                    <a
-                        href="#experience"
-                        class="block nav-link"
-                        onclick="toggleMenu()"
-                        >Experience</a
-                    >
-                    <a
-                        href="#skills"
-                        class="block nav-link"
-                        onclick="toggleMenu()"
-                        >Skills</a
-                    >
-                    <a
-                        href="#projects"
-                        class="block nav-link"
-                        onclick="toggleMenu()"
-                        >Projects</a
-                    >
-                    <a
-                        href="#contact"
-                        class="block nav-link"
-                        onclick="toggleMenu()"
-                        >Contact</a
-                    >
-                    <div class="flex gap-4 pt-4">
-                        <a
-                            href="https://github.com/OmarMuhammmed"
-                            target="_blank"
-                            class="nav-link"
-                            onclick="toggleMenu()">
-                            <i class="fab fa-github text-xl"></i>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#experience" onclick="toggleMenu()">Experience</a>
+        <a href="#skills" onclick="toggleMenu()">Skills</a>
+        <a href="#projects" onclick="toggleMenu()">Projects</a>
+        <a href="#posts" onclick="toggleMenu()">Posts</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+        <div class="mobile-socials">
+            <a href="https://github.com/OmarMuhammmed" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/omar-muhammed-9a7428285/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://wa.me/201157420362" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text reveal">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        <span>Open to Work</span>
+                    </div>
+                    <h1>Hi, I'm <span class="gradient-text">Omar Muhammed</span></h1>
+                    <p class="hero-role">Product-minded Backend Engineer</p>
+                    <p class="hero-desc">
+                        I build scalable, user-focused systems that drive business growth.
+                        Proficient in <span class="highlight">Django</span>, <span class="highlight">NestJS</span>, and <span class="highlight">FastAPI</span>
+                        with solid experience in PostgreSQL, cloud infrastructure, and DevOps practices.
+                    </p>
+                    <p class="hero-quote">
+                        "I am a Software Engineer, not bound to a specific tech stack."
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Get in Touch
                         </a>
-                        <a
-                            href="https://www.linkedin.com/in/omar-muhammed-9a7428285/"
-                            target="_blank"
-                            class="nav-link"
-                            onclick="toggleMenu()">
-                            <i class="fab fa-linkedin text-xl"></i>
+                        <a href="#projects" class="btn-secondary">
+                            <i class="fas fa-code"></i> View Work
                         </a>
-                        <a
-                            href="https://x.com/OmarMuhammmed"
-                            target="_blank"
-                            class="nav-link"
-                            onclick="toggleMenu()">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual reveal-right">
+                    <div class="profile-wrapper">
+                        <div class="profile-ring"></div>
+                        <img src="./profile1.jpg" alt="Omar Muhammed" class="profile-img">
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">1+</span>
+                            <span class="stat-label">Years Exp</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Companies</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </header>
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
 
-        <main class="container pt-24">
-            <section id="home" class="min-h-screen flex items-center py-20">
-                <div class="grid md:grid-cols-2 gap-12 items-center w-full">
-                    <div class="animate-fade">
-                        <h1 class="text-4xl md:text-6xl font-bold mb-4">
-                            Hi, I'm
-                            <span
-                                class="bg-gradient-to-r from-indigo-400 to-pink-500 bg-clip-text text-transparent"
-                                >Omar</span
-                            >
-                        </h1>
-                        <p
-                            class="text-2xl md:text-3xl text-indigo-400 font-semibold mb-6">
-                            Backend Engineer
-                        </p>
-                        <div
-                            class="text-gray-300 text-lg mb-8 leading-relaxed space-y-4">
-                            <p>
-                                I’m a Software Engineer who enjoys building
-                                things that solve real problems. Most of my
-                                experience has been with
-                                <span class="text-emerald-400">Django</span> and
-                                <span class="text-emerald-400"
-                                    >Django REST Framework</span
-                                >, where I’ve worked on projects in different
-                                domains like E-commerce, LMS, CRM, and
-                                Management Systems.
-                            </p>
-                            <p>
-                                What drives me the most is creating scalable,
-                                efficient solutions and writing code that’s
-                                clean and easy to maintain. I don’t limit myself
-                                to one stack—while Django has been my main tool,
-                                I’m always open (and excited) to work with new
-                                technologies if they help me deliver better
-                                results.
-                            </p>
-                            <p
-                                class="text-white font-medium border-l-4 border-indigo-500 pl-3">
-                                I am a Software Engineer not related to a
-                                specific tech stack.
-                            </p>
-                        </div>
-
-                        <div
-                            class="inline-flex items-center gap-3 bg-emerald-500 border border-emerald-500 px-4 py-2 rounded-full mb-8">
-                            <div
-                                class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-                            <span class="text-emerald-400 font-medium text-sm">
-                                <i class="fas fa-briefcase mr-2"></i> Open to
-                                Work
-                            </span>
-                        </div>
-
-                        <div class="flex flex-wrap gap-4">
-                            <a href="#contact" class="btn-gradient"
-                                >Get in Touch</a
-                            >
-                            <a href="#projects" class="btn-outline"
-                                >View Work</a
-                            >
-                        </div>
-                    </div>
-
-                    <div
-                        class="flex-1 flex justify-center animate-slide-in-right">
-                        <div
-                            class="relative profile-circle-container w-64 h-64 md:w-80 md:h-80">
-                            <img
-                                src="./profile1.jpg"
-                                alt="Omar Muhammed"
-                                class="w-full h-full object-cover hover:scale-105 hover:grayscale-0 grayscale-[30%] transition-all duration-300 z-10 relative" />
-                            <div
-                                class="absolute inset-[-15px] bg-gradient-to-r from-indigo-400 to-pink-600 opacity-60 blur-3xl animate-pulse-backdrop rounded-full"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="experience" class="py-20">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                        Work
-                        <span class="bg-gradient bg-clip-text">Experience</span>
-                    </h2>
-                    <p class="text-gray-400 text-lg">My professional journey</p>
-                </div>
-                <div class="max-w-4xl space-y-12">
-                    <div
-                        class="bg-gray-800 border border-indigo-500 rounded-xl p-8 card-hover">
-                        <div
-                            class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                            <div>
-                                <h3 class="text-2xl font-bold mb-2">
-                                    Backend Engineer
-                                </h3>
-                                <p class="text-indigo-400 text-xl mb-2">
-                                    Madinah Innovation
-                                </p>
-                                <p class="text-gray-400">Part-time · Riyadh, Saudi Arabia · Remote</p>
-                            </div>
-                            <div class="mt-4 md:mt-0">
-                                <span
-                                    class="inline-block bg-indigo-500 border border-indigo-500 px-4 py-2 rounded-full text-indigo-400 font-medium">
-                                    Oct 2025 - Present
-                                </span>
-                            </div>
-                        </div>
-                        <div class="mt-6">
-                            <h4
-                                class="text-lg font-semibold text-indigo-300 mb-4">
-                                UniApps - University Student Platform
-                            </h4>
-                            <ul class="space-y-3">
-                                <li
-                                    class="flex items-start gap-3 text-gray-300">
-                                    <i
-                                        class="fas fa-check-circle text-emerald-400 mt-1"></i
-                                    ><span
-                                        >Architected comprehensive Django-based
-                                        platform connecting university students
-                                        with merchants through voucher and
-                                        offers system</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-gray-300">
-                                    <i
-                                        class="fas fa-check-circle text-emerald-400 mt-1"></i
-                                    ><span
-                                        ><strong class="text-white"
-                                            >User Management:</strong
-                                        >
-                                        Implemented multi-tier authentication
-                                        system supporting Students, Merchants,
-                                        and Admins with OTP verification and
-                                        token-based security</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-gray-300">
-                                    <i
-                                        class="fas fa-check-circle text-emerald-400 mt-1"></i
-                                    ><span
-                                        ><strong class="text-white"
-                                            >Educational Hierarchy:</strong
-                                        >
-                                        Designed hierarchical university system
-                                        (Universities → Colleges → Departments →
-                                        Students) enabling targeted offer
-                                        distribution</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-gray-300">
-                                    <i
-                                        class="fas fa-check-circle text-emerald-400 mt-1"></i
-                                    ><span
-                                        ><strong class="text-white"
-                                            >Merchant & Subscription
-                                            Engine:</strong
-                                        >
-                                        Built flexible subscription system with
-                                        tiered plans, service management, and
-                                        offer generation logic</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-gray-300">
-                                    <i
-                                        class="fas fa-check-circle text-emerald-400 mt-1"></i
-                                    ><span
-                                        ><strong class="text-white"
-                                            >Gamification & Loyalty:</strong
-                                        >
-                                        Implemented points system with
-                                        transaction tracking, admin controls,
-                                        and comprehensive history
-                                        management</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-gray-300">
-                                    <i
-                                        class="fas fa-check-circle text-emerald-400 mt-1"></i
-                                    ><span
-                                        ><strong class="text-white"
-                                            >Hackathon & Team
-                                            Management:</strong
-                                        >
-                                        Developed event system with team
-                                        formation, role-based slot management,
-                                        and application workflow</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-gray-300">
-                                    <i
-                                        class="fas fa-check-circle text-emerald-400 mt-1"></i
-                                    ><span
-                                        ><strong class="text-white"
-                                            >Asynchronous Notifications:</strong
-                                        >
-                                        Implemented Celery + Redis-based
-                                        notification system with scalable
-                                        distributed workers for FCM push
-                                        notifications</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-gray-300">
-                                    <i
-                                        class="fas fa-check-circle text-emerald-400 mt-1"></i
-                                    ><span
-                                        >Built RESTful API with comprehensive
-                                        endpoints, Arabic language support via
-                                        Django i18n, and containerized
-                                        deployment with Docker</span
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div
-                        class="bg-gray-800 border rounded-xl p-8 card-hover"
-                        style="border-color: rgba(236, 72, 153, 0.2)">
-                        <div
-                            class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                            <div>
-                                <h3 class="text-2xl font-bold mb-2">
-                                    Backend Engineer
-                                </h3>
-                                <p class="text-pink-400 text-xl mb-2">
-                                    Functo Software House
-                                </p>
-                                <p class="text-gray-400">
-                                    Part-time · Cairo, Egypt · Remote
-                                </p>
-                            </div>
-                            <div class="mt-4 md:mt-0">
-                                <span
-                                    class="inline-block bg-pink-500 border border-pink-500 px-4 py-2 rounded-full text-pink-400 font-medium">
-                                    Jul 2025 - Oct 2025 · 4 mos
-                                </span>
-                            </div>
-                        </div>
-                        <div class="mt-6">
-                            <h4
-                                class="text-lg font-semibold text-pink-300 mb-4">
-                                Key Achievements
-                            </h4>
-                            <ul class="space-y-3">
-                                <li
-                                    class="flex items-start gap-3 text-gray-300">
-                                    <i
-                                        class="fas fa-check-circle text-emerald-400 mt-1"></i
-                                    ><span
-                                        >Refactored multiple CRM components
-                                        improving code maintainability and
-                                        system performance by 30%</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-gray-300">
-                                    <i
-                                        class="fas fa-check-circle text-emerald-400 mt-1"></i
-                                    ><span
-                                        ><strong class="text-white"
-                                            >Buyer Match:</strong
-                                        >
-                                        Designed and implemented automated
-                                        engine for intelligent customer-property
-                                        matching using Django and
-                                        PostgreSQL</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-gray-300">
-                                    <i
-                                        class="fas fa-check-circle text-emerald-400 mt-1"></i
-                                    ><span
-                                        ><strong class="text-white"
-                                            >Unit Share:</strong
-                                        >
-                                        Developed module enabling partial
-                                        property ownership functionality with
-                                        complex transaction handling</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-gray-300">
-                                    <i
-                                        class="fas fa-check-circle text-emerald-400 mt-1"></i
-                                    ><span
-                                        >Refactored and optimized Role-Based
-                                        Access Control (RBAC) system enhancing
-                                        security and reducing access control
-                                        overhead</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-gray-300">
-                                    <i
-                                        class="fas fa-check-circle text-emerald-400 mt-1"></i
-                                    ><span
-                                        >Collaborated with frontend team to
-                                        design and document RESTful APIs
-                                        ensuring seamless integration</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-gray-300">
-                                    <i
-                                        class="fas fa-check-circle text-emerald-400 mt-1"></i
-                                    ><span
-                                        >Participated in Agile development
-                                        cycles including sprint planning, daily
-                                        standups, and code reviews</span
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="skills" class="py-20">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                        Technical
-                        <span class="bg-gradient bg-clip-text">Skills</span>
-                    </h2>
-                    <p class="text-gray-400 text-lg">
-                        Technologies I work with
-                    </p>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div
-                        class="bg-gray-800 border border-indigo-500 rounded-xl p-6 card-hover">
-                        <div class="flex items-center gap-3 mb-4">
-                            <i
-                                class="fas fa-server text-3xl text-indigo-400"></i>
-                            <h3 class="text-xl font-bold">Backend</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="bg-indigo-500 text-indigo-300 px-3 py-1.5 rounded-lg text-sm"
-                                >Python</span
-                            >
-                            <span
-                                class="bg-indigo-500 text-indigo-300 px-3 py-1.5 rounded-lg text-sm"
-                                >Django</span
-                            >
-                            <span
-                                class="bg-indigo-500 text-indigo-300 px-3 py-1.5 rounded-lg text-sm"
-                                >DRF</span
-                            >
-                            <span
-                                class="bg-indigo-500 text-indigo-300 px-3 py-1.5 rounded-lg text-sm"
-                                >FastAPI</span
-                            >
-                            <span
-                                class="bg-indigo-500 text-indigo-300 px-3 py-1.5 rounded-lg text-sm"
-                                >Flask</span
-                            >
-                            <span
-                                class="bg-indigo-500 text-indigo-300 px-3 py-1.5 rounded-lg text-sm"
-                                >Node js</span
-                            >
-                            <span
-                                class="bg-indigo-500 text-indigo-300 px-3 py-1.5 rounded-lg text-sm"
-                                >Celery</span
-                            >
-                            <span
-                                class="bg-indigo-500 text-indigo-300 px-3 py-1.5 rounded-lg text-sm"
-                                >GraphQL</span
-                            >
-                            <span
-                                class="bg-indigo-500 text-indigo-300 px-3 py-1.5 rounded-lg text-sm"
-                                >Java</span
-                            >
-                        </div>
-                    </div>
-                    <div
-                        class="bg-gray-800 border rounded-xl p-6 card-hover"
-                        style="border-color: rgba(16, 185, 129, 0.2)">
-                        <div class="flex items-center gap-3 mb-4">
-                            <i
-                                class="fas fa-database text-3xl text-emerald-400"></i>
-                            <h3 class="text-xl font-bold">Database</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="bg-emerald-500 text-emerald-300 px-3 py-1.5 rounded-lg text-sm"
-                                >PostgreSQL</span
-                            >
-                            <span
-                                class="bg-emerald-500 text-emerald-300 px-3 py-1.5 rounded-lg text-sm"
-                                >SQLite3</span
-                            >
-                            <span
-                                class="bg-emerald-500 text-emerald-300 px-3 py-1.5 rounded-lg text-sm"
-                                >Redis</span
-                            >
-                            <span
-                                class="bg-emerald-500 text-emerald-300 px-3 py-1.5 rounded-lg text-sm"
-                                >RabbitMQ</span
-                            >
-                        </div>
-                    </div>
-                    <div
-                        class="bg-gray-800 border rounded-xl p-6 card-hover"
-                        style="border-color: rgba(59, 130, 246, 0.2)">
-                        <div class="flex items-center gap-3 mb-4">
-                            <i
-                                class="fas fa-palette text-3xl text-blue-400"></i>
-                            <h3 class="text-xl font-bold">Frontend</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="bg-blue-500 text-blue-300 px-3 py-1.5 rounded-lg text-sm"
-                                >HTML</span
-                            >
-                            <span
-                                class="bg-blue-500 text-blue-300 px-3 py-1.5 rounded-lg text-sm"
-                                >CSS3</span
-                            >
-                            <span
-                                class="bg-blue-500 text-blue-300 px-3 py-1.5 rounded-lg text-sm"
-                                >JavaScript</span
-                            >
-                            <span
-                                class="bg-blue-500 text-blue-300 px-3 py-1.5 rounded-lg text-sm"
-                                >TypeScript</span
-                            >
-                            <span
-                                class="bg-blue-500 text-blue-300 px-3 py-1.5 rounded-lg text-sm"
-                                >Bootstrap</span
-                            >
-                            <span
-                                class="bg-blue-500 text-blue-300 px-3 py-1.5 rounded-lg text-sm"
-                                >Tailwind</span
-                            >
-                        </div>
-                    </div>
-                    <div
-                        class="bg-gray-800 border rounded-xl p-6 card-hover"
-                        style="border-color: rgba(245, 158, 11, 0.2)">
-                        <div class="flex items-center gap-3 mb-4">
-                            <i class="fas fa-tools text-3xl text-amber-400"></i>
-                            <h3 class="text-xl font-bold">DevOps</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="bg-amber-500 text-amber-300 px-3 py-1.5 rounded-lg text-sm"
-                                >Docker</span
-                            >
-                            <span
-                                class="bg-amber-500 text-amber-300 px-3 py-1.5 rounded-lg text-sm"
-                                >Git</span
-                            >
-                            <span
-                                class="bg-amber-500 text-amber-300 px-3 py-1.5 rounded-lg text-sm"
-                                >Linux</span
-                            >
-                            <span
-                                class="bg-amber-500 text-amber-300 px-3 py-1.5 rounded-lg text-sm"
-                                >CI/CD</span
-                            >
-                            <span
-                                class="bg-amber-500 text-amber-300 px-3 py-1.5 rounded-lg text-sm"
-                                >Nginx</span
-                            >
-                            <span
-                                class="bg-amber-500 text-amber-300 px-3 py-1.5 rounded-lg text-sm"
-                                >TDD</span
-                            >
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-30 flex flex-wrap justify-center gap-3">
-                    <span
-                        class="bg-pink-500 border border-pink-500 px-4 py-2 rounded-full text-pink-300"
-                        >Algorithms</span
-                    >
-                    <span
-                        class="bg-pink-500 border border-pink-500 px-4 py-2 rounded-full text-pink-300"
-                        >Data Structures</span
-                    >
-                    <span
-                        class="bg-pink-500 border border-pink-500 px-4 py-2 rounded-full text-pink-300"
-                        >OOP</span
-                    >
-                    <span
-                        class="bg-pink-500 border border-pink-500 px-4 py-2 rounded-full text-pink-300"
-                        >SOLID Principles</span
-                    >
-                    <span
-                        class="bg-pink-500 border border-pink-500 px-4 py-2 rounded-full text-pink-300"
-                        >API Design</span
-                    >
-                    <span
-                        class="bg-pink-500 border border-pink-500 px-4 py-2 rounded-full text-pink-300"
-                        >C++</span
-                    >
-                </div>
-            </section>
-
-            <section id="posts" class="py-20">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                        My
-                        <span class="bg-gradient bg-clip-text">Thoughts</span>
-                    </h2>
-                    <p class="text-gray-400 text-lg">
-                        Sharing knowledge and experiences on LinkedIn
-                    </p>
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Career</span>
+                    <h2>Professional <span class="gradient-text">Experience</span></h2>
+                    <p>Building products that matter</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <article
-                        class="bg-gray-800 border border-blue-500/30 rounded-xl p-6 card-hover flex flex-col h-full">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center gap-3">
-                                <i
-                                    class="fab fa-linkedin text-2xl text-blue-400"></i>
-                                <span class="text-sm text-gray-400"
-                                    >Technical Deep Dive</span
-                                >
-                            </div>
-                            <a
-                                href="https://www.linkedin.com/feed/update/urn:li:activity:7387103126723588096/"
-                                target="_blank"
-                                class="text-blue-400 hover:text-blue-300">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
+                <div class="timeline">
+                    <!-- Madinah Innovation -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot active"></div>
+                            <div class="timeline-line"></div>
                         </div>
-
-                        <h3 class="text-xl font-bold mb-3 text-white">
-                            Concurrency vs. Parallelism: What’s the difference?
-                        </h3>
-
-                        <p
-                            class="text-gray-300 mb-6 flex-grow leading-relaxed text-sm">
-                            Many developers confuse these two concepts. In this
-                            post, I explain how Concurrency is about dealing
-                            with multiple tasks (Context Switching) versus
-                            Parallelism which is actual simultaneous execution.
-                            I also cover pitfalls like Race Conditions and
-                            Deadlocks.
-                        </p>
-
-                        <a
-                            href="https://www.linkedin.com/feed/update/urn:li:activity:7387103126723588096/"
-                            target="_blank"
-                            class="mt-auto w-full text-center py-3 rounded-lg border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white transition-all font-medium">
-                            Read Full Post
-                        </a>
-                    </article>
-
-                    <article
-                        class="bg-gray-800 border border-blue-500/30 rounded-xl p-6 card-hover flex flex-col h-full">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center gap-3">
-                                <i
-                                    class="fab fa-linkedin text-2xl text-blue-400"></i>
-                                <span class="text-sm text-gray-400"
-                                    >Database Engineering</span
-                                >
-                            </div>
-                            <a
-                                href="https://www.linkedin.com/feed/update/urn:li:activity:7382398382100742144/"
-                                target="_blank"
-                                class="text-blue-400 hover:text-blue-300">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-
-                        <h3 class="text-xl font-bold mb-3 text-white">
-                            Mastering Database Transactions & ACID
-                        </h3>
-
-                        <p
-                            class="text-gray-300 mb-6 flex-grow leading-relaxed text-sm">
-                            A deep dive into why we need Transactions,
-                            explaining ACID properties (Atomicity, Consistency,
-                            Isolation, Durability) and how Write-Ahead Logging
-                            (WAL) works. I also discuss common isolation issues
-                            like Dirty Reads and Phantom Reads.
-                        </p>
-
-                        <a
-                            href="https://www.linkedin.com/feed/update/urn:li:activity:7382398382100742144/"
-                            target="_blank"
-                            class="mt-auto w-full text-center py-3 rounded-lg border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white transition-all font-medium">
-                            Read Full Post
-                        </a>
-                    </article>
-
-                    <article
-                        class="bg-gray-800 border border-blue-500/30 rounded-xl p-6 card-hover flex flex-col h-full">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center gap-3">
-                                <i
-                                    class="fab fa-linkedin text-2xl text-blue-400"></i>
-                                <span class="text-sm text-gray-400"
-                                    >Career Advice</span
-                                >
-                            </div>
-                            <a
-                                href="https://www.linkedin.com/feed/update/urn:li:activity:7379850925907046400/"
-                                target="_blank"
-                                class="text-blue-400 hover:text-blue-300">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-
-                        <h3 class="text-xl font-bold mb-3 text-white">
-                            The Art of Prioritization in Software Engineering
-                        </h3>
-
-                        <p
-                            class="text-gray-300 mb-6 flex-grow leading-relaxed text-sm">
-                            Learning every buzzword (Microservices, K8s, Kafka)
-                            at once is a trap. I share my experience with
-                            getting lost in advanced topics too early and why
-                            prioritizing your learning path based on your
-                            current level is key to growth.
-                        </p>
-
-                        <a
-                            href="https://www.linkedin.com/feed/update/urn:li:activity:7379850925907046400/"
-                            target="_blank"
-                            class="mt-auto w-full text-center py-3 rounded-lg border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white transition-all font-medium">
-                            Read Full Post
-                        </a>
-                    </article>
-                </div>
-            </section>
-            <section id="projects" class="py-20">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                        Featured
-                        <span class="bg-gradient bg-clip-text">Projects</span>
-                    </h2>
-                    <p class="text-gray-400 text-lg">What I've been building</p>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div
-                        class="bg-gray-800 border border-indigo-500 rounded-xl p-6 card-hover">
-                        <div class="flex items-center gap-3 mb-4">
-                            <i
-                                class="fab fa-twitter text-2xl text-indigo-400"></i>
-                            <h3 class="text-xl font-bold">Twitter API Clone</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span
-                                class="bg-indigo-500 text-indigo-300 px-2 py-1 rounded text-xs"
-                                >Django</span
-                            >
-                            <span
-                                class="bg-indigo-500 text-indigo-300 px-2 py-1 rounded text-xs"
-                                >DRF</span
-                            >
-                            <span
-                                class="bg-indigo-500 text-indigo-300 px-2 py-1 rounded text-xs"
-                                >PostgreSQL</span
-                            >
-                            <span
-                                class="bg-indigo-500 text-indigo-300 px-2 py-1 rounded text-xs"
-                                >Redis</span
-                            >
-                        </div>
-                        <p class="text-gray-300 mb-4">
-                            Comprehensive backend with authentication, tweet
-                            management, likes, retweets...
-                        </p>
-                        <a
-                            href="https://github.com/OmarMuhammmed/E-Learing-Platform"
-                            target="_blank"
-                            class="project-link inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-medium"
-                            ><i class="fab fa-github"></i> View Code
-                            <i class="fas fa-arrow-right text-sm"></i
-                        ></a>
-                    </div>
-                    <div
-                        class="bg-gray-800 border rounded-xl p-6 card-hover"
-                        style="border-color: rgba(16, 185, 129, 0.2)">
-                        <div class="flex items-center gap-3 mb-4">
-                            <i
-                                class="fas fa-graduation-cap text-2xl text-emerald-400"></i>
-                            <h3 class="text-xl font-bold">
-                                E-Learning Platform
-                            </h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span
-                                class="bg-emerald-500 text-emerald-300 px-2 py-1 rounded text-xs"
-                                >Django</span
-                            >
-                            <span
-                                class="bg-emerald-500 text-emerald-300 px-2 py-1 rounded text-xs"
-                                >DRF</span
-                            >
-                            <span
-                                class="bg-emerald-500 text-emerald-300 px-2 py-1 rounded text-xs"
-                                >WebSockets</span
-                            >
-                            <span
-                                class="bg-emerald-500 text-emerald-300 px-2 py-1 rounded text-xs"
-                                >Docker</span
-                            >
-                        </div>
-                        <p class="text-gray-300 mb-4">
-                            Full-featured course management system with
-                            structured chapters...
-                        </p>
-                        <a
-                            href="https://github.com/OmarMuhammmed/E-Learing-Platform"
-                            target="_blank"
-                            class="project-link inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-medium"
-                            ><i class="fab fa-github"></i> View Code
-                            <i class="fas fa-arrow-right text-sm"></i
-                        ></a>
-                    </div>
-                    <div
-                        class="bg-gray-800 border rounded-xl p-6 card-hover"
-                        style="border-color: rgba(59, 130, 246, 0.2)">
-                        <div class="flex items-center gap-3 mb-4">
-                            <i
-                                class="fas fa-shopping-cart text-2xl text-blue-400"></i>
-                            <h3 class="text-xl font-bold">E-Commerce API</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span
-                                class="bg-blue-500 text-blue-300 px-2 py-1 rounded text-xs"
-                                >Django</span
-                            >
-                            <span
-                                class="bg-blue-500 text-blue-300 px-2 py-1 rounded text-xs"
-                                >DRF</span
-                            >
-                            <span
-                                class="bg-blue-500 text-blue-300 px-2 py-1 rounded text-xs"
-                                >PostgreSQL</span
-                            >
-                            <span
-                                class="bg-blue-500 text-blue-300 px-2 py-1 rounded text-xs"
-                                >Celery</span
-                            >
-                        </div>
-                        <p class="text-gray-300 mb-4">
-                            Robust, scalable RESTful API with complete
-                            e-commerce functionality...
-                        </p>
-                        <a
-                            href="https://github.com/OmarMuhammmed/Ecommerce-API"
-                            target="_blank"
-                            class="project-link inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium"
-                            ><i class="fab fa-github"></i> View Code
-                            <i class="fas fa-arrow-right text-sm"></i
-                        ></a>
-                    </div>
-                    <div
-                        class="bg-gray-800 border rounded-xl p-6 card-hover"
-                        style="border-color: rgba(236, 72, 153, 0.2)">
-                        <div class="flex items-center gap-3 mb-4">
-                            <i
-                                class="fas fa-utensils text-2xl text-pink-400"></i>
-                            <h3 class="text-xl font-bold">Recipe API</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span
-                                class="bg-pink-500 text-pink-300 px-2 py-1 rounded text-xs"
-                                >Django</span
-                            >
-                            <span
-                                class="bg-pink-500 text-pink-300 px-2 py-1 rounded text-xs"
-                                >DRF</span
-                            >
-                            <span
-                                class="bg-pink-500 text-pink-300 px-2 py-1 rounded text-xs"
-                                >TDD</span
-                            >
-                            <span
-                                class="bg-pink-500 text-pink-300 px-2 py-1 rounded text-xs"
-                                >Nginx</span
-                            >
-                        </div>
-                        <p class="text-gray-300 mb-4">
-                            Production-ready recipe management API built with
-                            TDD principles...
-                        </p>
-                        <a
-                            href="https://github.com/OmarMuhammmed/Recipe-API"
-                            target="_blank"
-                            class="project-link inline-flex items-center gap-2 text-pink-400 hover:text-pink-300 font-medium"
-                            ><i class="fab fa-github"></i> View Code
-                            <i class="fas fa-arrow-right text-sm"></i
-                        ></a>
-                    </div>
-                    <div
-                        class="bg-gray-800 border rounded-xl p-6 card-hover"
-                        style="border-color: rgba(245, 158, 11, 0.2)">
-                        <div class="flex items-center gap-3 mb-4">
-                            <i
-                                class="fas fa-search text-2xl text-amber-400"></i>
-                            <h3 class="text-xl font-bold">
-                                Product Search API
-                            </h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span
-                                class="bg-amber-500 text-amber-300 px-2 py-1 rounded text-xs"
-                                >Django</span
-                            >
-                            <span
-                                class="bg-amber-500 text-amber-300 px-2 py-1 rounded text-xs"
-                                >PostgreSQL</span
-                            >
-                            <span
-                                class="bg-amber-500 text-amber-300 px-2 py-1 rounded text-xs"
-                                >Full-Text Search</span
-                            >
-                        </div>
-                        <p class="text-gray-300 mb-4">
-                            Advanced search with full-text capabilities, fuzzy
-                            matching...
-                        </p>
-                        <a
-                            href="https://github.com/OmarMuhammmed/product-search-api"
-                            target="_blank"
-                            class="project-link inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-medium"
-                            ><i class="fab fa-github"></i> View Code
-                            <i class="fas fa-arrow-right text-sm"></i
-                        ></a>
-                    </div>
-                    <div
-                        class="bg-gray-800 border rounded-xl p-6 card-hover"
-                        style="border-color: rgba(168, 85, 247, 0.2)">
-                        <div class="flex items-center gap-3 mb-4">
-                            <i
-                                class="fas fa-user-graduate text-2xl text-purple-400"></i>
-                            <h3 class="text-xl font-bold">
-                                Student Payment System
-                            </h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span
-                                class="bg-purple-500 text-purple-300 px-2 py-1 rounded text-xs"
-                                >Django</span
-                            >
-                            <span
-                                class="bg-purple-500 text-purple-300 px-2 py-1 rounded text-xs"
-                                >SQLite</span
-                            >
-                            <span
-                                class="bg-purple-500 text-purple-300 px-2 py-1 rounded text-xs"
-                                >Arabic RTL</span
-                            >
-                            <span
-                                class="bg-purple-500 text-purple-300 px-2 py-1 rounded text-xs"
-                                >Docker</span
-                            >
-                        </div>
-                        <p class="text-gray-300 mb-4">
-                            Comprehensive payment management for educational
-                            institutions...
-                        </p>
-                        <a
-                            href="https://github.com/OmarMuhammmed/student-payment-system"
-                            target="_blank"
-                            class="project-link inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium"
-                            ><i class="fab fa-github"></i> View Code
-                            <i class="fas fa-arrow-right text-sm"></i
-                        ></a>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact" class="py-20">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                        Let's
-                        <span class="bg-gradient bg-clip-text">Connect</span>
-                    </h2>
-                    <p class="text-gray-400 text-lg">
-                        I'm currently open to new opportunities
-                    </p>
-                </div>
-                <div class="max-w-3xl">
-                    <div
-                        class="bg-emerald-500 border border-emerald-500 rounded-xl p-8 mb-12">
-                        <div
-                            class="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
-                            <div
-                                class="w-16 h-16 rounded-full flex items-center justify-center text-2xl shrink-0"
-                                style="background-color: #10b981">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div>
-                                <h3
-                                    class="text-xl font-bold text-emerald-400 mb-2">
-                                    Actively Seeking Backend Developer Roles
-                                </h3>
-                                <p class="text-gray-300">
-                                    Available for full-time positions and ready
-                                    to contribute...
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="bg-gray-800 border border-indigo-500 rounded-xl p-8">
-                        <div class="grid md:grid-cols-2 gap-8 mb-8">
-                            <div class="text-center md:text-left">
-                                <div
-                                    class="flex items-center justify-center md:justify-start gap-3 mb-3">
-                                    <i
-                                        class="fas fa-envelope text-indigo-400 text-xl"></i>
-                                    <h4 class="text-lg font-semibold">Email</h4>
+                        <div class="exp-card">
+                            <div class="exp-header">
+                                <div>
+                                    <h3>Backend Engineer</h3>
+                                    <p class="exp-company">Madinah Innovation</p>
+                                    <p class="exp-meta">Part-time &middot; Riyadh, Saudi Arabia &middot; Remote</p>
                                 </div>
-                                <a
-                                    href="mailto:omarmhd.swe@gmail.com"
-                                    class="text-gray-300 hover:text-indigo-400 transition-colors"
-                                    >omarmhd.swe@gmail.com</a
-                                >
+                                <span class="exp-badge active">Oct 2025 &mdash; Present</span>
                             </div>
-                            <div class="text-center md:text-left">
-                                <div
-                                    class="flex items-center justify-center md:justify-start gap-3 mb-3">
-                                    <i
-                                        class="fas fa-share-alt text-pink-400 text-xl"></i>
-                                    <h4 class="text-lg font-semibold">
-                                        Social
-                                    </h4>
+                            <div class="exp-projects">
+                                <div class="exp-project">
+                                    <h4><i class="fas fa-dumbbell"></i> Neutration &mdash; Fitness & Nutrition Platform</h4>
+                                    <ul>
+                                        <li>Engineered AI-powered fitness ecosystem with personalized meal generation using asynchronous background processing (Celery/Redis)</li>
+                                        <li>Built real-time specialist-client collaboration via WebSockets (Django Channels)</li>
+                                        <li>Integrated Moyasar payment API with webhook-driven logic for tiered subscriptions and quota management</li>
+                                        <li>Developed scalable notification system using Celery and FCM for real-time status updates</li>
+                                    </ul>
                                 </div>
-                                <div
-                                    class="flex justify-center md:justify-start gap-4">
-                                    <a
-                                        href="https://github.com/OmarMuhammmed"
-                                        target="_blank"
-                                        class="w-10 h-10 bg-gray-700 hover:bg-indigo-500 rounded-full flex items-center justify-center text-white transition-all duration-300 shadow-md hover:shadow-lg"
-                                        ><i class="fab fa-github text-lg"></i
-                                    ></a>
-                                    <a
-                                        href="https://www.linkedin.com/in/omar-muhammed-9a7428285/"
-                                        target="_blank"
-                                        class="w-10 h-10 bg-gray-700 hover:bg-indigo-500 rounded-full flex items-center justify-center text-white transition-all duration-300 shadow-md hover:shadow-lg"
-                                        ><i class="fab fa-linkedin text-lg"></i
-                                    ></a>
-                                    <a
-                                        href="https://x.com/OmarMuhammmed"
-                                        target="_blank"
-                                        class="w-10 h-10 bg-gray-700 hover:bg-indigo-500 rounded-full flex items-center justify-center text-white transition-all duration-300 shadow-md hover:shadow-lg"
-                                        ><i class="fab fa-twitter text-lg"></i
-                                    ></a>
+                                <div class="exp-project">
+                                    <h4><i class="fas fa-university"></i> UniApps &mdash; University Student Platform</h4>
+                                    <ul>
+                                        <li>Architected multi-tenant Django platform connecting university students with merchants via automated voucher engine</li>
+                                        <li>Implemented gamification with user streaks, wallet rewards, and achievement tiers for retention</li>
+                                        <li>Optimized containerized deployments with Docker and Docker Compose across PostgreSQL, Redis, and Django/ASGI workers</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="text-center pt-4 border-t border-gray-700">
-                            <a
-                                href="https://drive.google.com/file/d/12CNMrn4LZT_uy2KntKDqAhvd2UkQjFPo/view?usp=sharing"
-                                target="_blank"
-                                class="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-500 to-pink-500 px-6 py-3 rounded-full font-semibold text-white hover:scale-105 transition-transform shadow-lg"
-                                ><i class="fas fa-download"></i> Download CV</a
-                            >
+                    </div>
+
+                    <!-- Functo -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="exp-card">
+                            <div class="exp-header">
+                                <div>
+                                    <h3>Backend Engineer</h3>
+                                    <p class="exp-company functo">Functo Software House</p>
+                                    <p class="exp-meta">Cairo, Egypt &middot; Remote</p>
+                                </div>
+                                <span class="exp-badge">Jul 2025 &mdash; Oct 2025</span>
+                            </div>
+                            <div class="exp-achievements">
+                                <ul>
+                                    <li>Refactored critical CRM components, increasing system throughput by <strong>30%</strong> and improving query efficiency</li>
+                                    <li>Developed "Buyer Match" engine &mdash; automated property-matching algorithm using advanced PostgreSQL filtering</li>
+                                    <li>Implemented "Unit Share" modules for complex partial-ownership transactions and fractional property management</li>
+                                    <li>Optimized RBAC security layers, reducing authentication overhead across distributed services</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
 
-        <footer
-            class="border-t py-8 text-center text-gray-400"
-            style="border-color: rgba(99, 102, 241, 0.2)">
-            <p>© 2025 Omar Muhammed. All rights reserved.</p>
-        </footer>
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Expertise</span>
+                    <h2>Technical <span class="gradient-text">Skills</span></h2>
+                    <p>Technologies and tools I work with</p>
+                </div>
 
-        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-        <script>
-            // Particles.js
-            particlesJS("particles-js", {
-                particles: {
-                    number: {
-                        value: 60,
-                        density: { enable: true, value_area: 800 },
-                    },
-                    color: { value: "#6366f1" },
-                    shape: { type: "circle" },
-                    opacity: { value: 0.3 },
-                    size: { value: 3, random: true },
-                    line_linked: {
-                        enable: true,
-                        distance: 150,
-                        color: "#4f46e5",
-                        opacity: 0.3,
-                        width: 1,
-                    },
-                    move: {
-                        enable: true,
-                        speed: 2,
-                        direction: "none",
-                        random: false,
-                        out_mode: "out",
-                    },
-                },
-                interactivity: {
-                    detect_on: "canvas",
-                    events: {
-                        onhover: { enable: true, mode: "repulse" },
-                        onclick: { enable: true, mode: "push" },
-                    },
-                    modes: {
-                        repulse: { distance: 100 },
-                        push: { particles_nb: 4 },
-                    },
-                },
+                <div class="skills-grid">
+                    <div class="skill-card reveal" style="--accent: #818cf8;">
+                        <div class="skill-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend & Frameworks</h3>
+                        <div class="skill-tags">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>DRF</span>
+                            <span>FastAPI</span>
+                            <span>NestJS</span>
+                            <span>TypeScript</span>
+                            <span>Celery</span>
+                            <span>GraphQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-card reveal" style="--accent: #34d399;">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Databases & Messaging</h3>
+                        <div class="skill-tags">
+                            <span>PostgreSQL</span>
+                            <span>Redis</span>
+                            <span>MySQL</span>
+                            <span>SQLite</span>
+                            <span>RabbitMQ</span>
+                        </div>
+                    </div>
+                    <div class="skill-card reveal" style="--accent: #60a5fa;">
+                        <div class="skill-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Cloud & DevOps</h3>
+                        <div class="skill-tags">
+                            <span>Docker</span>
+                            <span>Docker Compose</span>
+                            <span>Nginx</span>
+                            <span>CI/CD</span>
+                            <span>Git</span>
+                            <span>Linux</span>
+                            <span>VPS</span>
+                        </div>
+                    </div>
+                    <div class="skill-card reveal" style="--accent: #f472b6;">
+                        <div class="skill-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3>Web & Integrations</h3>
+                        <div class="skill-tags">
+                            <span>WebSockets</span>
+                            <span>REST APIs</span>
+                            <span>JWT</span>
+                            <span>OAuth2</span>
+                            <span>Swagger</span>
+                            <span>Moyasar</span>
+                            <span>Stripe</span>
+                            <span>PayMob</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cs-fundamentals reveal">
+                    <h3>CS Fundamentals</h3>
+                    <div class="fundamentals-tags">
+                        <span>Data Structures</span>
+                        <span>Algorithms</span>
+                        <span>OOP</span>
+                        <span>Design Patterns</span>
+                        <span>System Design</span>
+                        <span>TDD</span>
+                        <span>SOLID</span>
+                        <span>API Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Portfolio</span>
+                    <h2>Featured <span class="gradient-text">Projects</span></h2>
+                    <p>What I've been building</p>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card reveal" style="--accent: #818cf8;">
+                        <div class="project-top">
+                            <div class="project-icon"><i class="fab fa-x-twitter"></i></div>
+                            <a href="https://github.com/OmarMuhammmed/E-Learing-Platform" target="_blank" class="project-link-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                        <h3>Twitter API Clone</h3>
+                        <p>Real-time social platform with tweet management, custom recommendation algorithms, and live notifications via WebSockets.</p>
+                        <div class="project-tags">
+                            <span>Django</span><span>DRF</span><span>WebSockets</span><span>Redis</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" style="--accent: #34d399;">
+                        <div class="project-top">
+                            <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <a href="https://github.com/OmarMuhammmed/E-Learing-Platform" target="_blank" class="project-link-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                        <h3>E-Learning Platform</h3>
+                        <p>Full-featured LMS with structured course hierarchies, student progress tracking, and instructor dashboards.</p>
+                        <div class="project-tags">
+                            <span>Django</span><span>PostgreSQL</span><span>Docker</span><span>JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" style="--accent: #60a5fa;">
+                        <div class="project-top">
+                            <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
+                            <a href="https://github.com/OmarMuhammmed/Ecommerce-API" target="_blank" class="project-link-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                        <h3>E-Commerce Platform API</h3>
+                        <p>Scalable API supporting high-concurrency transactions with integrated payment gateways and inventory management.</p>
+                        <div class="project-tags">
+                            <span>Django</span><span>Celery</span><span>Stripe</span><span>Redis</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" style="--accent: #f472b6;">
+                        <div class="project-top">
+                            <div class="project-icon"><i class="fas fa-utensils"></i></div>
+                            <a href="https://github.com/OmarMuhammmed/Recipe-API" target="_blank" class="project-link-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                        <h3>Recipe API</h3>
+                        <p>Production-ready recipe management API built with TDD principles, Docker, and Nginx for deployment.</p>
+                        <div class="project-tags">
+                            <span>Django</span><span>DRF</span><span>TDD</span><span>Nginx</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" style="--accent: #fbbf24;">
+                        <div class="project-top">
+                            <div class="project-icon"><i class="fas fa-search"></i></div>
+                            <a href="https://github.com/OmarMuhammmed/product-search-api" target="_blank" class="project-link-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                        <h3>Product Search API</h3>
+                        <p>Advanced search with PostgreSQL full-text capabilities, fuzzy matching, and weighted ranking algorithms.</p>
+                        <div class="project-tags">
+                            <span>Django</span><span>PostgreSQL</span><span>Full-Text Search</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" style="--accent: #c084fc;">
+                        <div class="project-top">
+                            <div class="project-icon"><i class="fas fa-user-graduate"></i></div>
+                            <a href="https://github.com/OmarMuhammmed/student-payment-system" target="_blank" class="project-link-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                        <h3>Student Payment System</h3>
+                        <p>Comprehensive payment management for educational institutions with Arabic RTL support and Docker deployment.</p>
+                        <div class="project-tags">
+                            <span>Django</span><span>SQLite</span><span>Arabic RTL</span><span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Posts Section -->
+        <section id="posts" class="section">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Writing</span>
+                    <h2>My <span class="gradient-text">Thoughts</span></h2>
+                    <p>Sharing knowledge and experiences on LinkedIn</p>
+                </div>
+
+                <div class="posts-grid">
+                    <article class="post-card reveal">
+                        <div class="post-header">
+                            <span class="post-tag">Payment Integration</span>
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7421892740105261056/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <h3>How To Integrate with Any Payment Service</h3>
+                        <p>A practical guide on integrating payment services into your applications. I break down the common patterns, webhook handling, and best practices that apply regardless of which payment provider you choose.</p>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7421892740105261056/" target="_blank" class="post-cta">
+                            Read Full Post <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="post-card reveal">
+                        <div class="post-header">
+                            <span class="post-tag">Database Engineering</span>
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7382398382100742144/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <h3>Mastering Database Transactions & ACID</h3>
+                        <p>A deep dive into why we need Transactions, explaining ACID properties and how Write-Ahead Logging (WAL) works. I also discuss common isolation issues like Dirty Reads and Phantom Reads.</p>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7382398382100742144/" target="_blank" class="post-cta">
+                            Read Full Post <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="post-card reveal">
+                        <div class="post-header">
+                            <span class="post-tag">Career Advice</span>
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7379850925907046400/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <h3>The Art of Prioritization in Software Engineering</h3>
+                        <p>Learning every buzzword at once is a trap. I share my experience with getting lost in advanced topics too early and why prioritizing your learning path based on your current level is key to growth.</p>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7379850925907046400/" target="_blank" class="post-cta">
+                            Read Full Post <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Education</span>
+                    <h2>Academic <span class="gradient-text">Background</span></h2>
+                </div>
+                <div class="education-card reveal">
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="edu-info">
+                        <h3>Bachelor of Computer Science</h3>
+                        <p class="edu-school">Obour Institute for Management and Computer Technology</p>
+                        <p class="edu-meta">Obour, Cairo, Egypt &middot; September 2023 &mdash; May 2027</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Let's Talk</span>
+                    <h2>Get in <span class="gradient-text">Touch</span></h2>
+                    <p>I'm currently open to new opportunities</p>
+                </div>
+
+                <div class="contact-grid reveal">
+                    <div class="contact-card">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:omarmhd.swe@gmail.com">omarmhd.swe@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <span>+20 1157420362</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <span>Al Qalyubiyah, Egypt</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-actions">
+                        <div class="social-links">
+                            <a href="https://github.com/OmarMuhammmed" target="_blank" class="social-btn github"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://www.linkedin.com/in/omar-muhammed-9a7428285/" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                            <a href="https://wa.me/201157420362" target="_blank" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        </div>
+                        <a href="https://drive.google.com/file/d/12CNMrn4LZT_uy2KntKDqAhvd2UkQjFPo/view?usp=sharing" target="_blank" class="btn-primary download-cv">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Omar Muhammed. Built with passion.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
             });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-            // Mobile menu toggle
-            function toggleMenu() {
-                document
-                    .getElementById("mobile-menu")
-                    .classList.toggle("hidden");
-            }
+        document.querySelectorAll('.reveal, .reveal-right').forEach(el => observer.observe(el));
 
-            // Smooth scroll with offset for fixed header
-            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-                anchor.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(
-                        this.getAttribute("href"),
-                    );
-                    if (target) {
-                        const offset = 80;
-                        const elementPosition =
-                            target.getBoundingClientRect().top;
-                        const offsetPosition =
-                            elementPosition + window.pageYOffset - offset;
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: "smooth",
-                        });
-                    }
-                });
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const top = section.offsetTop - 100;
+                if (window.scrollY >= top) current = section.getAttribute('id');
             });
-        </script>
-    </body>
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const toggle = document.querySelector('.mobile-toggle');
+            menu.classList.toggle('open');
+            toggle.classList.toggle('open');
+        }
+
+        // Cursor glow
+        const glow = document.getElementById('cursor-glow');
+        document.addEventListener('mousemove', (e) => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        });
+    </script>
+</body>
 </html>
