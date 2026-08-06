@@ -1,0 +1,11 @@
+enable 
+configre terminal
+
+
+vlan 10 
+name Sales
+exit 
+
+vlan 20
+name Engineering
+exit

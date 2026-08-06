@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omar Muhammed | Backend Engineer</title>
+    <meta name="description" content="Portfolio of Omar Muhammed, a product-minded Backend Engineer specializing in Django, NestJS, FastAPI, and scalable system design.">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- CRT Screen Effects -->
+    <div class="crt-overlay"></div>
+    <div class="crt-vignette"></div>
+    <div class="noise-overlay"></div>
+    <div class="grid-bg"></div>
+
     <!-- Cursor glow effect -->
     <div id="cursor-glow"></div>
 
@@ -18,7 +24,7 @@
     <header id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">
-                <span class="logo-bracket">{</span>OM<span class="logo-bracket">}</span>
+                OM<span>.SYS</span>
             </a>
             <nav class="nav-links" id="nav-links">
                 <a href="#home" class="nav-link active">Home</a>
@@ -63,13 +69,13 @@
                 <div class="hero-text reveal">
                     <div class="hero-badge">
                         <span class="pulse-dot"></span>
-                        <span>Open to Work</span>
+                        <span>SYS.STATUS // ACTIVE // OPEN_TO_WORK</span>
                     </div>
-                    <h1>Hi, I'm <span class="gradient-text">Omar Muhammed</span></h1>
-                    <p class="hero-role">Product-minded Backend Engineer</p>
+                    <h1>&gt; Hi, I'm <br><span class="glow-text-green">Omar Muhammed</span></h1>
+                    <p class="hero-role" id="typing-role">&gt; BACKEND_ENGINEER.EXE</p>
                     <p class="hero-desc">
-                        I build scalable, user-focused systems that drive business growth.
-                        Proficient in <span class="highlight">Django</span>, <span class="highlight">NestJS</span>, and <span class="highlight">FastAPI</span>
+                        I build scalable, user-focused systems that drive business growth. 
+                        Proficient in <span class="highlight">Django</span>, <span class="highlight">NestJS</span>, and <span class="highlight">FastAPI</span> 
                         with solid experience in PostgreSQL, cloud infrastructure, and DevOps practices.
                     </p>
                     <p class="hero-quote">
@@ -77,7 +83,7 @@
                     </p>
                     <div class="hero-cta">
                         <a href="#contact" class="btn-primary">
-                            <i class="fas fa-paper-plane"></i> Get in Touch
+                            <i class="fas fa-paper-plane"></i> Connect
                         </a>
                         <a href="#projects" class="btn-secondary">
                             <i class="fas fa-code"></i> View Work
@@ -86,7 +92,6 @@
                 </div>
                 <div class="hero-visual reveal-right">
                     <div class="profile-wrapper">
-                        <div class="profile-ring"></div>
                         <img src="./profile_image.png" alt="Omar Muhammed" class="profile-img">
                     </div>
                     <div class="hero-stats">
@@ -105,81 +110,70 @@
                     </div>
                 </div>
             </div>
-            <div class="scroll-indicator">
+            <a href="#experience" class="scroll-indicator">
                 <span>Scroll Down</span>
                 <i class="fas fa-chevron-down"></i>
-            </div>
+            </a>
         </section>
 
         <!-- Experience Section -->
         <section id="experience" class="section">
             <div class="section-container">
                 <div class="section-header reveal">
-                    <span class="section-tag">Career</span>
-                    <h2>Professional <span class="gradient-text">Experience</span></h2>
-                    <p>Building products that matter</p>
+                    <span class="section-tag">Career Logs</span>
+                    <h2>Professional <span>Experience</span></h2>
+                    <p>Building high-performance backend pipelines</p>
                 </div>
 
-                <div class="timeline">
+                <div class="experience-track reveal">
                     <!-- Madinah Innovation -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-marker">
-                            <div class="timeline-dot active"></div>
-                            <div class="timeline-line"></div>
-                        </div>
-                        <div class="exp-card">
-                            <div class="exp-header">
-                                <div>
-                                    <h3>Backend Engineer</h3>
-                                    <p class="exp-company">Madinah Innovation</p>
-                                    <p class="exp-meta">Part-time &middot; Riyadh, Saudi Arabia &middot; Remote</p>
-                                </div>
-                                <span class="exp-badge active">Oct 2025 &mdash; Present</span>
+                    <div class="exp-card scanline-card">
+                        <div class="exp-header">
+                            <div class="exp-title-group">
+                                <h3>Backend Engineer</h3>
+                                <p class="exp-company">Madinah Innovation</p>
+                                <p class="exp-meta">Part-time // Remote // Riyadh, Saudi Arabia</p>
                             </div>
-                            <div class="exp-projects">
-                                <div class="exp-project">
-                                    <h4><i class="fas fa-dumbbell"></i> Neutration &mdash; Fitness & Nutrition Platform</h4>
-                                    <ul>
-                                        <li>Engineered AI-powered fitness ecosystem with personalized meal generation using asynchronous background processing (Celery/Redis)</li>
-                                        <li>Built real-time specialist-client collaboration via WebSockets (Django Channels)</li>
-                                        <li>Integrated Moyasar payment API with webhook-driven logic for tiered subscriptions and quota management</li>
-                                        <li>Developed scalable notification system using Celery and FCM for real-time status updates</li>
-                                    </ul>
-                                </div>
-                                <div class="exp-project">
-                                    <h4><i class="fas fa-university"></i> UniApps &mdash; University Student Platform</h4>
-                                    <ul>
-                                        <li>Architected multi-tenant Django platform connecting university students with merchants via automated voucher engine</li>
-                                        <li>Implemented gamification with user streaks, wallet rewards, and achievement tiers for retention</li>
-                                        <li>Optimized containerized deployments with Docker and Docker Compose across PostgreSQL, Redis, and Django/ASGI workers</li>
-                                    </ul>
-                                </div>
+                            <span class="exp-badge active">Oct 2025 - Present</span>
+                        </div>
+                        <div class="exp-projects">
+                            <div class="exp-project">
+                                <h4><i class="fas fa-dumbbell"></i> Neutration — Fitness Platform</h4>
+                                <ul>
+                                    <li>Engineered AI-powered fitness ecosystem with personalized meal generation using asynchronous background processing (Celery/Redis)</li>
+                                    <li>Built real-time specialist-client collaboration via WebSockets (Django Channels)</li>
+                                    <li>Integrated Moyasar payment API with webhook-driven logic for subscriptions & quotas</li>
+                                    <li>Developed notification system using Celery and FCM for real-time status updates</li>
+                                </ul>
+                            </div>
+                            <div class="exp-project">
+                                <h4><i class="fas fa-university"></i> UniApps — Student Platform</h4>
+                                <ul>
+                                    <li>Architected multi-tenant Django platform connecting students with merchants via voucher engine</li>
+                                    <li>Implemented gamification with user streaks, wallet rewards, and achievement tiers</li>
+                                    <li>Optimized deployments with Docker Compose across PostgreSQL, Redis, and Django</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
 
                     <!-- Functo -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-marker">
-                            <div class="timeline-dot"></div>
+                    <div class="exp-card scanline-card">
+                        <div class="exp-header">
+                            <div class="exp-title-group">
+                                <h3>Backend Engineer</h3>
+                                <p class="exp-company functo">Functo Software House</p>
+                                <p class="exp-meta">Remote // Cairo, Egypt</p>
+                            </div>
+                            <span class="exp-badge">Jul 2025 - Oct 2025</span>
                         </div>
-                        <div class="exp-card">
-                            <div class="exp-header">
-                                <div>
-                                    <h3>Backend Engineer</h3>
-                                    <p class="exp-company functo">Functo Software House</p>
-                                    <p class="exp-meta">Cairo, Egypt &middot; Remote</p>
-                                </div>
-                                <span class="exp-badge">Jul 2025 &mdash; Oct 2025</span>
-                            </div>
-                            <div class="exp-achievements">
-                                <ul>
-                                    <li>Refactored critical CRM components, increasing system throughput by <strong>30%</strong> and improving query efficiency</li>
-                                    <li>Developed "Buyer Match" engine &mdash; automated property-matching algorithm using advanced PostgreSQL filtering</li>
-                                    <li>Implemented "Unit Share" modules for complex partial-ownership transactions and fractional property management</li>
-                                    <li>Optimized RBAC security layers, reducing authentication overhead across distributed services</li>
-                                </ul>
-                            </div>
+                        <div class="exp-achievements">
+                            <ul>
+                                <li>Refactored critical CRM components, increasing system throughput by <strong>30%</strong> and improving query efficiency</li>
+                                <li>Developed "Buyer Match" engine — automated property-matching algorithm using advanced PostgreSQL filtering</li>
+                                <li>Implemented "Unit Share" modules for complex partial-ownership and fractional property management</li>
+                                <li>Optimized RBAC security layers, reducing authentication overhead across distributed services</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -190,75 +184,74 @@
         <section id="skills" class="section">
             <div class="section-container">
                 <div class="section-header reveal">
-                    <span class="section-tag">Expertise</span>
-                    <h2>Technical <span class="gradient-text">Skills</span></h2>
-                    <p>Technologies and tools I work with</p>
+                    <span class="section-tag">System Spec</span>
+                    <h2>Technical <span>Skills</span></h2>
+                    <p>Verified stack capabilities and system expertise</p>
                 </div>
 
-                <div class="skills-grid">
-                    <div class="skill-card reveal" style="--accent: #818cf8;">
-                        <div class="skill-icon">
-                            <i class="fas fa-server"></i>
+                <div class="skills-terminal scanline-card reveal">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <div class="terminal-btn red"></div>
+                            <div class="terminal-btn amber"></div>
+                            <div class="terminal-btn green"></div>
                         </div>
-                        <h3>Backend & Frameworks</h3>
-                        <div class="skill-tags">
-                            <span>Python</span>
-                            <span>Django</span>
-                            <span>DRF</span>
-                            <span>FastAPI</span>
-                            <span>NestJS</span>
-                            <span>TypeScript</span>
-                            <span>Celery</span>
-                            <span>GraphQL</span>
-                        </div>
+                        <div class="terminal-title">guest@omarmuh.swe:~/.skills</div>
                     </div>
-                    <div class="skill-card reveal" style="--accent: #34d399;">
-                        <div class="skill-icon">
-                            <i class="fas fa-database"></i>
+                    <div class="terminal-body">
+                        <div class="terminal-prompt">
+                            <span class="user">guest@omarmuh.swe</span>:<span class="dir">~</span>$ cat core_competencies.json
                         </div>
-                        <h3>Databases & Messaging</h3>
-                        <div class="skill-tags">
-                            <span>PostgreSQL</span>
-                            <span>Redis</span>
-                            <span>MySQL</span>
-                            <span>SQLite</span>
-                            <span>RabbitMQ</span>
-                        </div>
-                    </div>
-                    <div class="skill-card reveal" style="--accent: #60a5fa;">
-                        <div class="skill-icon">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <h3>Cloud & DevOps</h3>
-                        <div class="skill-tags">
-                            <span>Docker</span>
-                            <span>Docker Compose</span>
-                            <span>Nginx</span>
-                            <span>CI/CD</span>
-                            <span>Git</span>
-                            <span>Linux</span>
-                            <span>VPS</span>
-                        </div>
-                    </div>
-                    <div class="skill-card reveal" style="--accent: #f472b6;">
-                        <div class="skill-icon">
-                            <i class="fas fa-plug"></i>
-                        </div>
-                        <h3>Web & Integrations</h3>
-                        <div class="skill-tags">
-                            <span>WebSockets</span>
-                            <span>REST APIs</span>
-                            <span>JWT</span>
-                            <span>OAuth2</span>
-                            <span>Swagger</span>
-                            <span>Moyasar</span>
-                            <span>Stripe</span>
-                            <span>PayMob</span>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h3>Backend & Frameworks</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Django / DRF</span>
+                                    <span class="skill-tag">FastAPI</span>
+                                    <span class="skill-tag">NestJS</span>
+                                    <span class="skill-tag">TypeScript</span>
+                                    <span class="skill-tag">Celery</span>
+                                    <span class="skill-tag">GraphQL</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h3>Databases & Queues</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">PostgreSQL</span>
+                                    <span class="skill-tag">Redis</span>
+                                    <span class="skill-tag">MySQL</span>
+                                    <span class="skill-tag">SQLite</span>
+                                    <span class="skill-tag">RabbitMQ</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h3>Cloud & DevOps</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">Docker Compose</span>
+                                    <span class="skill-tag">Nginx</span>
+                                    <span class="skill-tag">CI/CD Actions</span>
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">Linux / VPS</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h3>Integrations & API</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">WebSockets</span>
+                                    <span class="skill-tag">REST APIs</span>
+                                    <span class="skill-tag">JWT / OAuth2</span>
+                                    <span class="skill-tag">Moyasar Pay</span>
+                                    <span class="skill-tag">Stripe / PayMob</span>
+                                    <span class="skill-tag">Swagger Docs</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="cs-fundamentals reveal">
+                <div class="cs-fundamentals scanline-card reveal">
                     <h3>CS Fundamentals</h3>
                     <div class="fundamentals-tags">
                         <span>Data Structures</span>
@@ -278,81 +271,104 @@
         <section id="projects" class="section">
             <div class="section-container">
                 <div class="section-header reveal">
-                    <span class="section-tag">Portfolio</span>
-                    <h2>Featured <span class="gradient-text">Projects</span></h2>
-                    <p>What I've been building</p>
+                    <span class="section-tag">Deployments</span>
+                    <h2>Featured <span>Projects</span></h2>
+                    <p>Recent architectural blueprints and builds</p>
                 </div>
 
                 <div class="projects-grid">
-                    <div class="project-card reveal" style="--accent: #818cf8;">
+                    <!-- Project 1 -->
+                    <div class="project-card scanline-card reveal">
                         <div class="project-top">
                             <div class="project-icon"><i class="fab fa-x-twitter"></i></div>
-                            <a href="https://github.com/OmarMuhammmed/E-Learing-Platform" target="_blank" class="project-link-icon"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/OmarMuhammmed/E-Learing-Platform" target="_blank" class="project-link-icon" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
                         </div>
                         <h3>Twitter API Clone</h3>
                         <p>Real-time social platform with tweet management, custom recommendation algorithms, and live notifications via WebSockets.</p>
                         <div class="project-tags">
-                            <span>Django</span><span>DRF</span><span>WebSockets</span><span>Redis</span>
+                            <span>Django</span>
+                            <span>DRF</span>
+                            <span>WebSockets</span>
+                            <span>Redis</span>
                         </div>
                     </div>
 
-                    <div class="project-card reveal" style="--accent: #34d399;">
+                    <!-- Project 2 -->
+                    <div class="project-card scanline-card reveal">
                         <div class="project-top">
                             <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
-                            <a href="https://github.com/OmarMuhammmed/E-Learing-Platform" target="_blank" class="project-link-icon"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/OmarMuhammmed/E-Learing-Platform" target="_blank" class="project-link-icon" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
                         </div>
                         <h3>E-Learning Platform</h3>
                         <p>Full-featured LMS with structured course hierarchies, student progress tracking, and instructor dashboards.</p>
                         <div class="project-tags">
-                            <span>Django</span><span>PostgreSQL</span><span>Docker</span><span>JavaScript</span>
+                            <span>Django</span>
+                            <span>PostgreSQL</span>
+                            <span>Docker</span>
+                            <span>JavaScript</span>
                         </div>
                     </div>
 
-                    <div class="project-card reveal" style="--accent: #60a5fa;">
+                    <!-- Project 3 -->
+                    <div class="project-card scanline-card reveal">
                         <div class="project-top">
                             <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
-                            <a href="https://github.com/OmarMuhammmed/Ecommerce-API" target="_blank" class="project-link-icon"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/OmarMuhammmed/Ecommerce-API" target="_blank" class="project-link-icon" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
                         </div>
                         <h3>E-Commerce Platform API</h3>
                         <p>Scalable API supporting high-concurrency transactions with integrated payment gateways and inventory management.</p>
                         <div class="project-tags">
-                            <span>Django</span><span>Celery</span><span>Stripe</span><span>Redis</span>
+                            <span>Django</span>
+                            <span>Celery</span>
+                            <span>Stripe</span>
+                            <span>Redis</span>
                         </div>
                     </div>
 
-                    <div class="project-card reveal" style="--accent: #f472b6;">
+                    <!-- Project 4 -->
+                    <div class="project-card scanline-card reveal">
                         <div class="project-top">
                             <div class="project-icon"><i class="fas fa-utensils"></i></div>
-                            <a href="https://github.com/OmarMuhammmed/Recipe-API" target="_blank" class="project-link-icon"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/OmarMuhammmed/Recipe-API" target="_blank" class="project-link-icon" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
                         </div>
                         <h3>Recipe API</h3>
                         <p>Production-ready recipe management API built with TDD principles, Docker, and Nginx for deployment.</p>
                         <div class="project-tags">
-                            <span>Django</span><span>DRF</span><span>TDD</span><span>Nginx</span>
+                            <span>Django</span>
+                            <span>DRF</span>
+                            <span>TDD</span>
+                            <span>Nginx</span>
                         </div>
                     </div>
 
-                    <div class="project-card reveal" style="--accent: #fbbf24;">
+                    <!-- Project 5 -->
+                    <div class="project-card scanline-card reveal">
                         <div class="project-top">
                             <div class="project-icon"><i class="fas fa-search"></i></div>
-                            <a href="https://github.com/OmarMuhammmed/product-search-api" target="_blank" class="project-link-icon"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/OmarMuhammmed/product-search-api" target="_blank" class="project-link-icon" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
                         </div>
                         <h3>Product Search API</h3>
                         <p>Advanced search with PostgreSQL full-text capabilities, fuzzy matching, and weighted ranking algorithms.</p>
                         <div class="project-tags">
-                            <span>Django</span><span>PostgreSQL</span><span>Full-Text Search</span>
+                            <span>Django</span>
+                            <span>PostgreSQL</span>
+                            <span>Full-Text Search</span>
                         </div>
                     </div>
 
-                    <div class="project-card reveal" style="--accent: #c084fc;">
+                    <!-- Project 6 -->
+                    <div class="project-card scanline-card reveal">
                         <div class="project-top">
                             <div class="project-icon"><i class="fas fa-user-graduate"></i></div>
-                            <a href="https://github.com/OmarMuhammmed/student-payment-system" target="_blank" class="project-link-icon"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/OmarMuhammmed/student-payment-system" target="_blank" class="project-link-icon" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
                         </div>
                         <h3>Student Payment System</h3>
                         <p>Comprehensive payment management for educational institutions with Arabic RTL support and Docker deployment.</p>
                         <div class="project-tags">
-                            <span>Django</span><span>SQLite</span><span>Arabic RTL</span><span>Docker</span>
+                            <span>Django</span>
+                            <span>SQLite</span>
+                            <span>Arabic RTL</span>
+                            <span>Docker</span>
                         </div>
                     </div>
                 </div>
@@ -363,45 +379,45 @@
         <section id="posts" class="section">
             <div class="section-container">
                 <div class="section-header reveal">
-                    <span class="section-tag">Writing</span>
-                    <h2>My <span class="gradient-text">Thoughts</span></h2>
-                    <p>Sharing knowledge and experiences on LinkedIn</p>
+                    <span class="section-tag">Broadcasts</span>
+                    <h2>My <span>Thoughts</span></h2>
+                    <p>System internals and engineering guides shared on LinkedIn</p>
                 </div>
 
                 <div class="posts-grid">
-                    <article class="post-card reveal">
+                    <article class="post-card scanline-card reveal">
                         <div class="post-header">
-                            <span class="post-tag">Payment Integration</span>
-                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7421892740105261056/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            <span class="post-tag">Payment Integrations</span>
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7421892740105261056/" target="_blank" aria-label="LinkedIn post"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                         <h3>How To Integrate with Any Payment Service</h3>
                         <p>A practical guide on integrating payment services into your applications. I break down the common patterns, webhook handling, and best practices that apply regardless of which payment provider you choose.</p>
                         <a href="https://www.linkedin.com/feed/update/urn:li:activity:7421892740105261056/" target="_blank" class="post-cta">
-                            Read Full Post <i class="fas fa-arrow-right"></i>
+                            Open Log <i class="fas fa-arrow-right"></i>
                         </a>
                     </article>
 
-                    <article class="post-card reveal">
+                    <article class="post-card scanline-card reveal">
                         <div class="post-header">
                             <span class="post-tag">Database Engineering</span>
-                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7382398382100742144/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7382398382100742144/" target="_blank" aria-label="LinkedIn post"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                         <h3>Mastering Database Transactions & ACID</h3>
                         <p>A deep dive into why we need Transactions, explaining ACID properties and how Write-Ahead Logging (WAL) works. I also discuss common isolation issues like Dirty Reads and Phantom Reads.</p>
                         <a href="https://www.linkedin.com/feed/update/urn:li:activity:7382398382100742144/" target="_blank" class="post-cta">
-                            Read Full Post <i class="fas fa-arrow-right"></i>
+                            Open Log <i class="fas fa-arrow-right"></i>
                         </a>
                     </article>
 
-                    <article class="post-card reveal">
+                    <article class="post-card scanline-card reveal">
                         <div class="post-header">
                             <span class="post-tag">Career Advice</span>
-                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7379850925907046400/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7379850925907046400/" target="_blank" aria-label="LinkedIn post"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                         <h3>The Art of Prioritization in Software Engineering</h3>
                         <p>Learning every buzzword at once is a trap. I share my experience with getting lost in advanced topics too early and why prioritizing your learning path based on your current level is key to growth.</p>
                         <a href="https://www.linkedin.com/feed/update/urn:li:activity:7379850925907046400/" target="_blank" class="post-cta">
-                            Read Full Post <i class="fas fa-arrow-right"></i>
+                            Open Log <i class="fas fa-arrow-right"></i>
                         </a>
                     </article>
                 </div>
@@ -412,15 +428,15 @@
         <section id="education" class="section">
             <div class="section-container">
                 <div class="section-header reveal">
-                    <span class="section-tag">Education</span>
-                    <h2>Academic <span class="gradient-text">Background</span></h2>
+                    <span class="section-tag">Credentials</span>
+                    <h2>Academic <span>Background</span></h2>
                 </div>
-                <div class="education-card reveal">
+                <div class="education-card scanline-card reveal">
                     <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
                     <div class="edu-info">
                         <h3>Bachelor of Computer Science</h3>
                         <p class="edu-school">Obour Institute for Management and Computer Technology</p>
-                        <p class="edu-meta">Obour, Cairo, Egypt &middot; September 2023 &mdash; May 2027</p>
+                        <p class="edu-meta">Obour, Cairo, Egypt // September 2023 — May 2027</p>
                     </div>
                 </div>
             </div>
@@ -430,9 +446,9 @@
         <section id="contact" class="section">
             <div class="section-container">
                 <div class="section-header reveal">
-                    <span class="section-tag">Let's Talk</span>
-                    <h2>Get in <span class="gradient-text">Touch</span></h2>
-                    <p>I'm currently open to new opportunities</p>
+                    <span class="section-tag">Ping System</span>
+                    <h2>Get in <span>Touch</span></h2>
+                    <p>Initiate connection protocol</p>
                 </div>
 
                 <div class="contact-grid reveal">
@@ -440,33 +456,33 @@
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <div>
-                                <h4>Email</h4>
+                                <h4>Email Address</h4>
                                 <a href="mailto:omarmhd.swe@gmail.com">omarmhd.swe@gmail.com</a>
                             </div>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
                             <div>
-                                <h4>Phone</h4>
+                                <h4>Phone Line</h4>
                                 <span>+20 1157420362</span>
                             </div>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
-                                <h4>Location</h4>
+                                <h4>Node Location</h4>
                                 <span>Al Qalyubiyah, Egypt</span>
                             </div>
                         </div>
                     </div>
                     <div class="contact-actions">
                         <div class="social-links">
-                            <a href="https://github.com/OmarMuhammmed" target="_blank" class="social-btn github"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://www.linkedin.com/in/omar-muhammed-9a7428285/" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                            <a href="https://wa.me/201157420362" target="_blank" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                            <a href="https://github.com/OmarMuhammmed" target="_blank" class="social-btn">GitHub <i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/omar-muhammed-9a7428285/" target="_blank" class="social-btn">LinkedIn <i class="fab fa-linkedin"></i></a>
+                            <a href="https://wa.me/201157420362" target="_blank" class="social-btn">WhatsApp <i class="fab fa-whatsapp"></i></a>
                         </div>
                         <a href="https://drive.google.com/file/d/12CNMrn4LZT_uy2KntKDqAhvd2UkQjFPo/view?usp=sharing" target="_blank" class="btn-primary download-cv">
-                            <i class="fas fa-download"></i> Download CV
+                            <i class="fas fa-download"></i> Download CV.pdf
                         </a>
                     </div>
                 </div>
@@ -477,7 +493,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2026 Omar Muhammed. Built with passion.</p>
+            <p>&copy; 2026 Omar Muhammed // TERMINAL.SYS v1.0.0 // ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
 
@@ -536,11 +552,53 @@
             toggle.classList.toggle('open');
         }
 
-        // Cursor glow
+        // Cursor glow following
         const glow = document.getElementById('cursor-glow');
         document.addEventListener('mousemove', (e) => {
             glow.style.left = e.clientX + 'px';
             glow.style.top = e.clientY + 'px';
+        });
+
+        // Dynamic typing animation for hero role
+        const roleElement = document.getElementById('typing-role');
+        const roles = [
+            '> BACKEND_ENGINEER.EXE',
+            '> SCALABLE_SYSTEMS.LOG',
+            '> DJANGO_EXPERT.PY',
+            '> NESTJS_ARCHITECT.TS'
+        ];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 100;
+
+        function type() {
+            const currentRole = roles[roleIndex];
+            if (isDeleting) {
+                roleElement.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+                typingSpeed = 50;
+            } else {
+                roleElement.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+                typingSpeed = 100;
+            }
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                isDeleting = true;
+                typingSpeed = 2000; // Delay before deleting
+            } else if (isDeleting && charIndex === 1) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                typingSpeed = 500; // Delay before typing next role
+            }
+
+            setTimeout(type, typingSpeed);
+        }
+
+        // Start typing after initial fade-in
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(type, 1000);
         });
     </script>
 </body>
