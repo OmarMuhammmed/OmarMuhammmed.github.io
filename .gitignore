@@ -26,3 +26,6 @@ Thumbs.db
 
 # REPL history
 .node_repl_history
+
+# Local copies and deployment preparation
+.backups/
